@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0c1b"/>
+      <stop offset="50%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#311042"/>
+    </linearGradient>
+    <linearGradient id="neonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="50%" stop-color="#ec4899"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background Rounded Circle -->
+  <rect width="512" height="512" rx="128" fill="url(#bgGrad)"/>
+  <rect width="496" height="496" x="8" y="8" rx="120" fill="none" stroke="url(#neonGrad)" stroke-width="8" opacity="0.6"/>
+
+  <!-- Glowing Disc Outer Ring -->
+  <circle cx="256" cy="256" r="160" fill="none" stroke="url(#neonGrad)" stroke-width="24" filter="url(#glow)"/>
+  <circle cx="256" cy="256" r="120" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.3"/>
+  <circle cx="256" cy="256" r="80" fill="none" stroke="url(#neonGrad)" stroke-width="12"/>
+
+  <!-- Disc Center Hole -->
+  <circle cx="256" cy="256" r="32" fill="#0f0c1b" stroke="#ffffff" stroke-width="6"/>
+
+  <!-- Musical Note Accent -->
+  <path d="M 290 160 L 340 140 L 340 230 C 330 220 310 220 300 230 C 290 240 290 260 300 270 C 310 280 330 280 340 270 C 350 260 350 240 350 140 L 290 160 Z" fill="url(#neonGrad)" filter="url(#glow)"/>
+</svg>

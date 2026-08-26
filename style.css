@@ -999,15 +999,29 @@ input[type="range"]::-webkit-slider-thumb {
     font-size: 12px;
     font-weight: 500;
     color: var(--accent-cyan);
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 6px;
     margin-top: 2px;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.created-by-tag:hover {
+    color: #fff;
+    transform: translateX(2px);
 }
 
 .created-by-tag strong {
     color: #fff;
     font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: rgba(6, 182, 212, 0.5);
+}
+
+.created-by-tag:hover strong {
+    color: var(--accent-pink);
+    text-decoration-color: var(--accent-pink);
 }
 
 .badge-dunkirk {
@@ -1016,6 +1030,15 @@ input[type="range"]::-webkit-slider-thumb {
     color: #fff;
     font-weight: 600;
     box-shadow: 0 0 12px rgba(139, 92, 246, 0.2);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.badge-dunkirk:hover {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.45), rgba(6, 182, 212, 0.45));
+    border-color: var(--accent-cyan);
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
 }
 
 .footer-dunkirk-badge {
@@ -1023,19 +1046,40 @@ input[type="range"]::-webkit-slider-thumb {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    padding: 8px 18px;
+    padding: 8px 20px;
     background: rgba(139, 92, 246, 0.12);
-    border: 1px solid rgba(139, 92, 246, 0.3);
+    border: 1px solid rgba(139, 92, 246, 0.35);
     border-radius: var(--radius-full);
     color: var(--accent-cyan);
     font-size: 14px;
     font-weight: 500;
     margin: 0 auto 6px auto;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-dunkirk-badge:hover {
+    background: rgba(139, 92, 246, 0.25);
+    border-color: var(--accent-cyan);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.35);
 }
 
 .footer-dunkirk-badge strong {
     color: #fff;
     font-weight: 700;
+}
+
+.external-link-icon {
+    font-size: 10px;
+    opacity: 0.8;
+    transition: transform 0.2s ease;
+}
+
+a:hover .external-link-icon {
+    transform: translate(2px, -2px);
+    opacity: 1;
 }
 
 /* Modals */
